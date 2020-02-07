@@ -42,12 +42,14 @@ export default class Form extends Component {
                     <form className="main">
                         <div>
                             <div {...this.state.inactive_falg ? {className: "span1"} : {...this.state.active_flag ? {className:"span1"}:{className: "span2"}}}>
-                                <span>
-                                    <span className="span3">
-                                        +91
-                                    </span>
-                                </span>
-                                <input  placeholder="Enter 10 Digit Mobile No" name="mobile"  maxLength="10" onChange={this.handleChange} pattern="[0-9]"></input>    
+                                <div className="inputWithIcon">
+                                    <div>
+                                        <input  placeholder="Enter 10 Digit Mobile No" name="mobile"  maxLength="10" onChange={this.handleChange} pattern="[0-9]"></input>    
+                                    </div>
+                                    <div>
+                                        <p aria-hidden="true">+91</p> 
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         {
